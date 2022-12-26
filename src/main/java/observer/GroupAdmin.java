@@ -49,7 +49,10 @@ public class GroupAdmin implements Sender {
 
     @Override
     public void unregister(Member member) {
-        members.remove(member);
+        if (members.contains(member)) {
+            members.remove(member);
+            member.update(new UndoableStringBuilder(member.toString()));
+        }
     }
 
     @Override

@@ -28,4 +28,9 @@ public class ConcreteMember implements Member{
     public void setUsbSallowCopy(UndoableStringBuilder usbSallowCopy) {
         this.usbSallowCopy = usbSallowCopy;
     }
+
+    @Override
+    public String toString() {
+        return usbSallowCopy.toString();
+    }
 }
