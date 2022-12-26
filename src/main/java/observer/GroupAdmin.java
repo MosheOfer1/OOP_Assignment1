@@ -49,6 +49,7 @@ public class GroupAdmin implements Sender {
 
     @Override
     public void unregister(Member member) {
+        // If a member is unregistered a new UndoableStringBuilder has to be
         if (members.contains(member)) {
             members.remove(member);
             member.update(new UndoableStringBuilder(member.toString()));
