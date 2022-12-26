@@ -4,10 +4,14 @@ This project implements the Observer pattern in Java, using the ConcreteMember a
 
 
 ## Class Definitions
-The ConcreteMember class implements the Member interface, which defines a update() method that is called when the group administrator sends an update. 
+- The **ConcreteMember** class implements the Member interface, which defines a update() method that is called when the group administrator sends an update. 
 The ConcreteMember class also has a usbSallowCopy field that stores a shallow copy of the UndoableStringBuilder object that is sent by the group administrator.
 
-The GroupAdmin class implements the Sender interface, which defines methods for registering and unregistering members, and for modifying the UndoableStringBuilder object. The GroupAdmin class also has a members field that stores a list of registered members, and a usb field that stores the UndoableStringBuilder object.
+- The **GroupAdmin** class implements the Sender interface, which defines methods for registering and unregistering members, and for modifying the UndoableStringBuilder object. The GroupAdmin class also has a members field that stores a list of registered members, and a usb field that stores the UndoableStringBuilder object.
+
+- The **UndoableStringBuilder** class is a wrapper around the StringBuilder class that adds support for undoing operations. It has methods for inserting, appending, deleting, and undoing, as well as a method for retrieving the current value of the string.
+
+- The **JvmUtilities**: Provides utility methods for tracking JVM resources, including the shallow and deep size footprint of objects, the total size of objects, and the JVM's process id, total memory, and available cores.
 ## Example Usage
 Here is an example of how to use the ConcreteMember and GroupAdmin classes:
 
